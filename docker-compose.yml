@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: docker/web.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/job_search
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./email_templates:/app/email_templates
+    networks:
+      - job_search_network
+
+  worker:
+    build:
+      context: .
+      dockerfile: docker/worker.Dockerfile
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/job_search
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./email_templates:/app/email_templates
+    networks:
+      - job_search_network
+
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=job_search
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - job_search_network
+
+  redis:
+    image: redis:6
+    volumes:
+      - redis_data:/data
+    networks:
+      - job_search_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  job_search_network:
+    driver: bridge

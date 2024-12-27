@@ -1,15 +1,35 @@
 # Job Search Automation System
 
-A multi-agent system built with Phidata that automates the job search process, from finding relevant positions to scheduling interviews.
+A multi-agent system built with Phidata that automates the job search process, from finding relevant positions to scheduling interviews. The system can be run either as a standalone application or deployed as a web service.
+
+## Deployment Options
+
+### 1. Standalone Application
+Run the system locally as a command-line application, perfect for personal use.
+
+### 2. Web Service (Docker)
+Deploy as a containerized web service with the following components:
+- FastAPI web server
+- Celery workers for background tasks
+- Redis for task queue and caching
+- PostgreSQL for data storage
 
 ## Features
 
+### Core Features
 - **Automated Job Collection**: Scrapes job postings from multiple platforms (LinkedIn, Glassdoor, Indeed)
 - **Intelligent Information Extraction**: Parses and structures job posting data
 - **Email Automation**: Handles application emails, follow-ups, and interview scheduling
 - **Calendar Integration**: Manages interview scheduling with Google Calendar
 - **Status Tracking**: Monitors application statuses and responses
 - **Customizable Preferences**: Configure job search criteria, email templates, and more
+
+### Web Service Features
+- **RESTful API**: Full API access to all automation features
+- **User Authentication**: Secure multi-user support
+- **Background Processing**: Asynchronous task handling
+- **Real-time Status Updates**: Monitor job search progress
+- **Scalable Architecture**: Handles multiple concurrent users
 
 ## System Architecture
 
@@ -22,13 +42,21 @@ The system uses four specialized agents:
 
 ## Prerequisites
 
+### For Standalone Application
 - Python 3.8+
 - PostgreSQL (optional, can use CSV storage)
 - Google Account (for Gmail and Calendar integration)
 - API keys for job platforms (LinkedIn, Glassdoor, Indeed)
 - OpenAI API key
 
+### Additional Requirements for Web Service
+- Docker and Docker Compose
+- Redis
+- PostgreSQL
+
 ## Installation
+
+### Standalone Application
 
 1. Clone the repository:
 ```bash
@@ -47,13 +75,34 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up environment variables:
+### Web Service Deployment
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Javid912/AI-job-search-assistant.git
+cd job-search-assistant
+```
+
+2. Build and start the containers:
+```bash
+docker-compose up -d --build
+```
+
+The web service will be available at:
+- API: http://localhost:8000
+- API Documentation: http://localhost:8000/docs
+
+## Configuration
+
+### Environment Variables
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` with your credentials:
-```
+Edit `.env` with your credentials and preferences:
+
+### For Standalone Application:
+```env
 OPENAI_API_KEY=your_openai_key
 GMAIL_CREDENTIALS=path_to_credentials.json
 CALENDAR_CREDENTIALS=path_to_credentials.json
@@ -66,7 +115,19 @@ PORTFOLIO_URL=https://your-portfolio.com
 DATABASE_URL=postgresql://user:password@localhost:5432/job_search
 ```
 
-5. Configure job search preferences in `config.py`
+### Additional Settings for Web Service:
+```env
+# Web Service Configuration
+JWT_SECRET_KEY=your-secret-key
+REDIS_URL=redis://redis:6379/0
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=job_search
+```
+
+### Application Configuration
+- Configure job search preferences in `config.py`
+- Adjust Docker settings in `docker-compose.yml` if needed
 
 ## Usage
 
