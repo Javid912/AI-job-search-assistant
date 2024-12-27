@@ -117,4 +117,3 @@ Data is stored in a database (PostgreSQL) or CSV files for simplicity and access
 
 ## **Conclusion**
 This document captures the foundational steps, tools, and rationale for building a multi-agent job search assistant. It serves as a living resource to guide the development process and ensure alignment with the project’s goals.
-
