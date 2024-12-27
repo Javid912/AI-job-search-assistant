@@ -32,7 +32,7 @@ The system uses four specialized agents:
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Javid912/AI-job-search-assistant.git
 cd job-search-assistant
 ```
 
