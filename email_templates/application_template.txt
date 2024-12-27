@@ -1,0 +1,17 @@
+Dear {contact_name},
+
+I am writing to express my strong interest in the {position} position at {company}, as advertised on {source}. With my background in {relevant_skills}, I believe I would be a valuable addition to your team.
+
+{custom_introduction}
+
+Key qualifications that align with your requirements:
+{bullet_points}
+
+{experience_summary}
+
+I have attached my resume and cover letter for your review. I would welcome the opportunity to discuss how my skills and experience align with your needs.
+
+Thank you for considering my application. I look forward to the possibility of discussing this opportunity with you.
+
+Best regards,
+{applicant_name}

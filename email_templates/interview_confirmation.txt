@@ -1,0 +1,25 @@
+Dear {contact_name},
+
+Thank you for considering my application for the {position} position at {company}. I am writing to confirm my interview scheduled for:
+
+Date: {interview_date}
+Time: {interview_time}
+Format: {interview_format}
+{location_details}
+
+{additional_instructions}
+
+I am looking forward to discussing the role in detail and learning more about the opportunity at {company}.
+
+{preparation_notes}
+
+Please let me know if there are any changes or if you need any additional information from me before the interview.
+
+Best regards,
+{applicant_name}
+
+Contact Information:
+Phone: {applicant_phone}
+Email: {applicant_email}
+
+Calendar Invitation: A calendar invitation has been sent separately.

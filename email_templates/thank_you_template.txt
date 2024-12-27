@@ -1,0 +1,18 @@
+Dear {contact_name},
+
+Thank you for taking the time to meet with me {interview_timing} to discuss the {position} position at {company}. I enjoyed learning more about {specific_discussion_points} and how I could contribute to your team.
+
+{specific_follow_up}
+
+Our conversation reinforced my enthusiasm for the position and my desire to join {company}. I am particularly excited about {key_opportunity} and believe my background in {relevant_skills} would enable me to make valuable contributions to your team.
+
+{additional_information}
+
+Thank you again for your time and consideration. I look forward to hearing about the next steps in the process.
+
+Best regards,
+{applicant_name}
+
+Contact Information:
+Phone: {applicant_phone}
+Email: {applicant_email}

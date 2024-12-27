@@ -1,0 +1,12 @@
+Dear {contact_name},
+
+I hope this email finds you well. I am following up on my application for the {position} position at {company}, which I submitted on {application_date}.
+
+I remain very interested in this opportunity and would welcome the chance to discuss how my background in {relevant_skills} aligns with your needs. I am particularly excited about {company_specific_detail} and believe I could contribute significantly to your team.
+
+Please let me know if you need any additional information from me. I look forward to hearing from you.
+
+Best regards,
+{applicant_name}
+
+Reference: Application submitted on {application_date}
